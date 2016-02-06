@@ -31,18 +31,19 @@ class GestorVentas {
 			producto = productoSeleccionado
 			cantidad = cantidadIngresada 
 		]
-		firePropertyChanged(this, "pedidos", pedidos)
+		//firePropertyChanged(this, "pedidos", pedidos)
 		productoSeleccionado = null
 		cantidadIngresada = 1
 		ordenarPedidos
 	}
 	
 	String descripcionDeProducto
+	
 	def crearProducto() {
 		VentasObjectSet.getInstance.agregarProducto(new Producto => [
 			descripcion = descripcionDeProducto
 		])
-		firePropertyChanged(this, "productos", clientes)
+//		firePropertyChanged(this, "productos", productos)
 		descripcionDeProducto = null
 		filtrarProductos
 	}
@@ -70,12 +71,13 @@ class GestorVentas {
 			nombre = nombreCliente
 			apellido = apellidoCliente
 		])
-		firePropertyChanged(this, "clientes", clientes)
+		//firePropertyChanged(this, "clientes", clientes)
 		//
 		nombreCliente = null
 		apellidoCliente = null
 		filtrarClientes()
 	}
+
 	def filtrarClientes() {
 		clientes = VentasObjectSet.getInstance
 			.todosLosClientes.filter[

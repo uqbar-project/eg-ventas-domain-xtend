@@ -2,19 +2,19 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>ventas-domain-xtend</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.2-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.uqbar-project</groupId>
 		<artifactId>uqbar-examples-xtend-parent</artifactId>
-		<version>2.7.3</version>
+		<version>2.9.1</version>
 	</parent>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.uqbar-project</groupId>
 			<artifactId>uqbar-domain</artifactId>
-			<version>3.5.1</version>
+			<version>3.6.1</version>
 		</dependency>
 	</dependencies>
 </project>

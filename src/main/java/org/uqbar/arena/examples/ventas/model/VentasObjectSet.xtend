@@ -8,7 +8,8 @@ import org.eclipse.xtend.lib.annotations.Accessors
  */
 @Accessors
 class VentasObjectSet {
-	static val INSTANCE = new VentasObjectSet
+	static var VentasObjectSet INSTANCE = null
+	
 	static var idCliente = 0
 	List<Cliente> todosLosClientes = newArrayList
 	static var codigoProducto = 0
@@ -28,6 +29,9 @@ class VentasObjectSet {
 	}
 	
 	def static getInstance() { 
+		if (INSTANCE == null) {
+			INSTANCE = new VentasObjectSet
+		}
 		INSTANCE
 	}
 	
@@ -40,4 +44,5 @@ class VentasObjectSet {
 		producto.codigo = codigoProducto++
 		todosLosProductos += producto
 	}
+	
 }

@@ -3,7 +3,7 @@ package org.uqbar.arena.examples.ventas.model
 import java.util.Date
 import java.util.List
 import org.eclipse.xtend.lib.annotations.Accessors
-import org.uqbar.commons.model.ObservableUtils
+import org.uqbar.commons.utils.Dependencies
 import org.uqbar.commons.utils.Observable
 
 /**
@@ -25,9 +25,10 @@ class DetalleProducto {
 	
 	def buscar() {
 		pedidos = producto.buscarPedidos(gestor, fechaDesde, fechaHasta)
-		ObservableUtils.firePropertyChanged(this, "resumenBusqueda", resumenBusqueda)
+//		ObservableUtils.firePropertyChanged(this, "resumenBusqueda", resumenBusqueda)
 	}
-	
+
+	@Dependencies("pedidos")	
 	def getResumenBusqueda() {
 		if (fechaDesde != null && fechaHasta != null)
 			'''«pedidos.size» encontrados en «daysBetween(fechaDesde, fechaHasta)» dias'''
