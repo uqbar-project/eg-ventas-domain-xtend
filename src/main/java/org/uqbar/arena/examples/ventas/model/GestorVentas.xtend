@@ -3,9 +3,8 @@ package org.uqbar.arena.examples.ventas.model
 import java.util.List
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.eclipse.xtext.xbase.lib.Functions.Function1
-import org.uqbar.commons.utils.Observable
-
-import static org.uqbar.commons.model.ObservableUtils.firePropertyChanged
+import org.uqbar.commons.model.annotations.Observable
+import static extension org.uqbar.commons.model.utils.ObservableUtils.*
 
 @Observable
 @Accessors
