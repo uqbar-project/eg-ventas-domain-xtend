@@ -4,3 +4,4 @@
 bin
 **generated**
 .settings
+xtend-gen

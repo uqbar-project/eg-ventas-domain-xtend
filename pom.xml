@@ -4,6 +4,20 @@
 	<artifactId>eg-ventas-domain-xtend</artifactId>
 	<version>1.0.2</version>
 
+	<repositories>
+		<repository>
+			<id>uqbar-wiki.org-releases</id>
+			<name>uqbar-wiki.org-releases</name>
+			<url>http://uqbar-wiki.org/mvn/releases</url>
+		</repository>
+		<repository>
+			<snapshots />
+			<id>uqbar-wiki.org-snapshots</id>
+			<name>uqbar-wiki.org-snapshots</name>
+			<url>http://uqbar-wiki.org/mvn/snapshots</url>
+		</repository>
+	</repositories>
+	
 	<parent>
 		<groupId>org.uqbar-project</groupId>
 		<artifactId>uqbar-examples-xtend-parent</artifactId>
