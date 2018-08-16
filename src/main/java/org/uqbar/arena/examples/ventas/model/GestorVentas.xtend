@@ -3,8 +3,10 @@ package org.uqbar.arena.examples.ventas.model
 import java.util.List
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.eclipse.xtext.xbase.lib.Functions.Function1
+import org.uqbar.commons.model.annotations.Dependencies
 import org.uqbar.commons.model.annotations.Observable
-import static extension org.uqbar.commons.model.utils.ObservableUtils.*
+
+import static org.uqbar.commons.model.utils.ObservableUtils.*
 
 @Observable
 @Accessors
@@ -22,6 +24,11 @@ class GestorVentas {
 	new() {
 		filtrarClientes
 		filtrarProductos
+	}
+
+	@Dependencies("clienteSeleccionado", "productoSeleccionado", "cantidadIngresada")	
+	def getPuedeCrearPedido() {
+		clienteSeleccionado !== null && productoSeleccionado !== null && cantidadIngresada > 0	
 	}
 	
 	def crearPedido() {
