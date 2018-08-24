@@ -29,7 +29,7 @@ class VentasObjectSet {
 	}
 	
 	def static getInstance() { 
-		if (INSTANCE == null) {
+		if (INSTANCE === null) {
 			INSTANCE = new VentasObjectSet
 		}
 		INSTANCE

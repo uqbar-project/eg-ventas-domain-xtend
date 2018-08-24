@@ -39,8 +39,8 @@ class Producto {
 	def buscarPedidos(GestorVentas gestor, Date fechaDesde, Date fechaHasta) {
 		gestor.pedidos.filter[ p |
 			p.producto == this && 
-			(fechaDesde == null || p.fecha.after(fechaDesde))
-			&& (fechaHasta == null || p.fecha.before(fechaHasta))
+			(fechaDesde === null || p.fecha.after(fechaDesde))
+			&& (fechaHasta === null || p.fecha.before(fechaHasta))
 		].toList
 	}
 

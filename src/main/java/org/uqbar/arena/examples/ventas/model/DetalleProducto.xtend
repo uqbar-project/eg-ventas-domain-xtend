@@ -30,7 +30,7 @@ class DetalleProducto {
 
 	@Dependencies("pedidos")	
 	def getResumenBusqueda() {
-		if (fechaDesde != null && fechaHasta != null)
+		if (fechaDesde !== null && fechaHasta !== null)
 			'''«pedidos.size» encontrados en «daysBetween(fechaDesde, fechaHasta)» dias'''
 		else
 			""

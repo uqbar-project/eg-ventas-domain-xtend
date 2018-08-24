@@ -60,7 +60,7 @@ class GestorVentas {
 	}
 
 	def filtrarProductos() {
-		productos = VentasObjectSet.getInstance.todosLosProductos.filter[busquedaProducto == null || descripcion.toLowerCase.contains(busquedaProducto.toLowerCase)].toList
+		productos = VentasObjectSet.getInstance.todosLosProductos.filter[busquedaProducto === null || descripcion.toLowerCase.contains(busquedaProducto.toLowerCase)].toList
 	}
 
 	String busquedaCliente
@@ -87,7 +87,7 @@ class GestorVentas {
 	def filtrarClientes() {
 		clientes = VentasObjectSet.getInstance
 			.todosLosClientes.filter[
-				busquedaCliente == null // 
+				busquedaCliente === null // 
 				|| nombre.toLowerCase.contains(busquedaCliente.toLowerCase) //
 				|| apellido.toLowerCase.contains(busquedaCliente.toLowerCase)
 				|| id.toString.contains(busquedaCliente)
